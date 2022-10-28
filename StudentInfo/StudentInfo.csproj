@@ -8,11 +8,6 @@
     <None Remove="Models\" />
     <None Remove="Microsoft.EntityFrameworkCore" />
     <None Remove="Pomelo.EntityFrameworkCore.MySql" />
-    <None Remove="Models %28copy%29\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Models old\" />
-    <Folder Include="Models %28copy%29\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.30" />
