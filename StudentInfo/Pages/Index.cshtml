@@ -1,5 +1,5 @@
 ﻿@page
-@model IndexModel
+@model List<Employee>
 
 @{
     ViewData["Title"] = "Employee Data";
@@ -27,20 +27,14 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Yuze</td>
-                <td>Dong</td>
-                <td>RA</td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" /></td>
-                <td><input type="checkbox" checked/></td>
-                <td><input type="checkbox" /></td>
-                <td>Fall</td>
-                <td>2022</td>
-                <td>Spencer Hilton</td>
-            </tr>
-        </tbody>
+                @foreach (var x in Model)
+
+                {
+                <tr>
+                    <td>@x.Notes</td>
+                </tr>
+                }
+            </tbody>
     </table>
     
 </div>

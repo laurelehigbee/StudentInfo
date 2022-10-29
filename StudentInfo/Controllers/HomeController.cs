@@ -12,9 +12,20 @@ namespace StudentInfo.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private EmployeesDbContext Students { get; set; } //connects to the context mode
+
+        public HomeController(EmployeesDbContext con)
+        //information to connect to the database, context model
         {
-            return View();
+            Students = con;
         }
+
+        [HttpGet]
+        public IActionResult Index() //return get request for the View Movies table
+        {
+            var table = Students.Employees.ToList();
+            return View(table);
+        }
+
     }
 }
